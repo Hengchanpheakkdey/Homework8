@@ -1,0 +1,32 @@
+<div class="card profile-card">
+  <div class="card-header">
+    <div class="avatar">{{user.fullName.[0]}}</div>
+    <h1>{{user.fullName}}</h1>
+    <span class="badge">@{{user.username}}</span>
+  </div>
+
+  <div class="profile-details">
+    <div class="detail-row">
+      <span class="detail-label">📧 Email</span>
+      <span class="detail-value">{{user.email}}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="detail-label">👤 Bio</span>
+      <span class="detail-value">{{user.bio}}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="detail-label">🎨 Theme</span>
+      <span class="detail-value">
+        <strong>{{theme}}</strong> mode active
+        &mdash;
+        <a href="/toggle-theme">Toggle</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="card-actions">
+    <a href="/logout" class="btn btn-danger">Sign Out</a>
+  </div>
+</div>

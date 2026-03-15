@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}} — AuthApp</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<!-- Apply theme class directly on body from signed cookie value -->
+<body class="{{theme}}">
+
+  <nav class="navbar">
+    <a class="brand" href="/">🔐 AuthApp</a>
+    <div class="nav-links">
+      <a href="/toggle-theme" class="btn btn-ghost">
+        {{#eq theme "dark"}}☀️ Light Mode{{else}}🌙 Dark Mode{{/eq}}
+      </a>
+    </div>
+  </nav>
+
+  <main class="container">
+    {{{body}}}
+  </main>
+
+  <footer>
+    <p>Express Authentication Assignment &mdash; Theme: <strong>{{theme}}</strong> mode</p>
+  </footer>
+
+</body>
+</html>
